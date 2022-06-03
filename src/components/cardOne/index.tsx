@@ -6,11 +6,12 @@ interface CardOneProps {
   description: string;
   icon: string;
   image: string;
+  onClick: () => void;
 }
 
 const CardOne: React.FC<CardOneProps> = (props) => {
   return (
-    <div className="Card">
+    <div className="Card" onClick={props.onClick}>
       <p className="cardTitle">{props.title}</p>
       <img src={props.icon} alt="image" className="iconImg" />
       <div className="logoImg">

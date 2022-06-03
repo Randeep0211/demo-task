@@ -21,6 +21,12 @@ const FirstCard = () => {
           image={qBraidImg}
           description="This is the ground from where we start developing.
           It can include text and color styles as well as standard interactions and spacing"
+          onClick={() => {
+            window.open(
+              "https://qbraid-qbraid.readthedocs-hosted.com/en/latest/sdk/overview.html",
+              "_blank"
+            );
+          }}
         />
       </div>
     </div>

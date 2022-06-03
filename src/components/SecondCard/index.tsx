@@ -2,15 +2,23 @@ import React from "react";
 import CardTwo from "../cardTwo/index";
 import { Data } from "../../data";
 
-const SecondCard = () => {
+export interface SecondCardData {
+  title: string;
+  link: string;
+  description: string;
+  icon: string;
+}
+
+const SecondCard: React.FC = () => {
   return (
     <div className="secondCardContainer">
-      {Data.map((el: any) => {
+      {Data.map((cardItem: SecondCardData) => {
         return (
           <CardTwo
-            title={el.title}
-            icon={el.icon}
-            description={el.description}
+            cardItem={cardItem}
+            onClick={(link: string) => {
+              window.open(link, "_blank");
+            }}
           />
         );
       })}

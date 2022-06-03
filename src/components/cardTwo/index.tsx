@@ -1,26 +1,27 @@
 import React from "react";
+import { SecondCardData } from "../SecondCard";
 import "./card.css";
 
 interface cardTwoProps {
-  title: string;
-  description: string;
-  icon: string;
+  cardItem: SecondCardData;
+  onClick: (link: string) => void;
 }
 
-const CardTwo: React.FC<cardTwoProps> = (props) => {
+const CardTwo: React.FC<cardTwoProps> = ({
+  cardItem,
+  onClick,
+}: cardTwoProps) => {
   return (
     <div>
-      <div className="Card">
-        <p className="cardTitle">{props.title}</p>
-        <img src={props.icon} alt="image" className="iconImg" />
+      <div className="Card" onClick={() => onClick(cardItem.link)}>
+        <p className="cardTitle">{cardItem.title}</p>
+        <img src={cardItem.icon} alt="image" className="iconImg" />
         <div>
-          <span>
-            <p className="name">
-              Qiskit <span className="nameTwo">/qiskit-terra</span>
-            </p>
-          </span>
+          <p className="name">
+            Qiskit <span className="nameTwo">/qiskit-terra</span>
+          </p>
         </div>
-        <p className="description">{props.description}</p>
+        <p className="description">{cardItem.description}</p>
       </div>
     </div>
   );
