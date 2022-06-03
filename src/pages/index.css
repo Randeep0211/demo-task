@@ -5,3 +5,12 @@
     margin-left:6px;
     margin-top: 20px
 }
+
+.Qiskitlogo{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction:row;
+    margin-left:20px;
+    margin-top: 20px
+}
