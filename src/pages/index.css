@@ -1,0 +1,7 @@
+.secondCardContainer{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    margin-left:6px;
+    margin-top: 20px
+}
